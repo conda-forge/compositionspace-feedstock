@@ -1,5 +1,5 @@
 {% set name = "compositionspace" %}
-{% set version = "0.0.7" %}
+{% set version = "0.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/compositionspace-{{ version }}.tar.gz
-  sha256: addb8a145c921ebbbfd92723cfed1df2d5ccde4279fbc44220ee276a32e252b1
+  sha256: f610d617f21c4cd2f0d41afc38b03bdfbe44b8401cc31d1a3153060511262500
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
