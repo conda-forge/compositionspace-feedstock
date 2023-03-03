@@ -1,11 +1,11 @@
-About compositionspace
-======================
+About compositionspace-feedstock
+================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/compositionspace-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/compositionspace/
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/compositionspace-feedstock/blob/main/LICENSE.txt)
 
 Summary: APT analysis tools
 
