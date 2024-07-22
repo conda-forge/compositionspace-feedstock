@@ -1,5 +1,5 @@
 {% set name = "compositionspace" %}
-{% set version = "0.0.9" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/compositionspace-{{ version }}.tar.gz
-  sha256: 52371a0398e1e77e6813b52ebea9cabcd608b97f937c35310422abf48c798768
+  sha256: 98095d3134b8ec9b66338197dc15e21eb21fc353fc9a5c086fc138e9161ccb9f
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
@@ -27,12 +27,12 @@ requirements:
     - h5py
     - scikit-learn
     - tqdm
-    - pyevtk
+    - ifes-apt-tc-data-modeling
+    - trimesh
     - pyyaml
-    - pyvista
-    - ipywidgets
-    - ipyvtklink
-    - panel
+    - flatdict
+    - lxml
+    - jupyterlab-h5web
 
 test:
   imports:
