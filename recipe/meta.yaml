@@ -6,21 +6,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/compositionspace-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/compositionspace-{{ version }}.tar.gz
   sha256: c3ccc61bee62da7e558d3c4a7246facd58ce22338146a362f0e3afe31f78aa1e
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pytest-runner
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - matplotlib-base
     - pandas
@@ -41,6 +41,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/compositionspace/
